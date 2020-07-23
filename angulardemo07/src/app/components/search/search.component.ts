@@ -1,5 +1,5 @@
 /*
-1、ng g service services/storag
+1、创建服务： ng g service services/storag
 
 2、app.module.ts 里面引入创建的服务 并且声明
 
@@ -23,7 +23,8 @@ providers: [StorageService]
 
           console.log(s);
       }
-
+      
+      初始化以后可以使用 this.storage 调用服务
 
 */
 
