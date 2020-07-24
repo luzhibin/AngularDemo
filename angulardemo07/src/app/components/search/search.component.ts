@@ -60,12 +60,14 @@ export class SearchComponent implements OnInit {
    
   }
 
+  //OnInit声明周期函数
   ngOnInit() {
 
     console.log('页面刷新会触发这个生命周期函数');
 
+    //页面刷新 初始化时 先到local storage里去找searchList
     var searchlist:any=this.storage.get('searchlist');
-
+    //判断search是否存在
     if(searchlist){
       this.historyList=searchlist;        
     }
@@ -80,7 +82,6 @@ export class SearchComponent implements OnInit {
 
 
       this.storage.set('searchlist',this.historyList);
-     
 
     }    
     this.keyword='';    
